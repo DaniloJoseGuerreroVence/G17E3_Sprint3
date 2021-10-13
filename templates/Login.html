@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}" >
+    <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
+</head>
+<body>
+    <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo"> 
+    <form>
+        <label>USERNAME <input type="email" name="email" placeholder="Type something..."></label>
+        <label>PASSWORD <input type="password" name="pass" placeholder="Type something..."></label>
+        <label><input id="remembercheck" type="checkbox" name="Remember password" value="Bike">Remember my password</label>
+        <input type="submit" value="Log in" id="submitbutton" >
+    </form>
+</body>
+</html>
