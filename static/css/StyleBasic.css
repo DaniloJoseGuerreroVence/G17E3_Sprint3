@@ -1,25 +1,56 @@
-body{
+footer {
+  background: #dd4f24;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+
+/* section {
+  background: #e8e8e8;
+} */
+
+header {
+  background: #444;
+  color: white;
+  display: grid;
+}
+
+body {
   background-color: black;
-  position: absolute;
+
+}
+
+body section div {
+  /* border: 5px solid #00bbf0; */
+  /* position: absolute; 
   top: 25%;
   left: 40%;
   height: 0;
-  width: 11%;
+  width: 11%;*/
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 form{
   color: white;
+  display: block;
+  text-align: center;
+  margin: 20px 0px 20px 0px;
 }
 
 input{
   display: block;
+  border-radius: 5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;  
+  margin-top: 3px;
   height: 40px;
   width: 180px;
-  border-radius: 5px;
+  /*text-align: center;
+ 
+  
   border-width: 0;
-  margin: 8%;
+  margin: 8%; */
 }
 
 #remembercheck{
@@ -29,12 +60,17 @@ input{
 }
 
 #submitbutton{
-  color: white;
   background-color: #00bbf0;
-  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
   height: 40px;
   width: 80px;
-  border-radius: 10px;
-  border-width: 0;
-  margin: auto;
+  color: white;
+  /*  
+  display: block;
+
+ 
+  border-width: 0px;
+  margin: 1% 0% 0% 45% ; */
+  
 }
