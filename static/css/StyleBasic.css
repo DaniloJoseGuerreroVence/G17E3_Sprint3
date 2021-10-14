@@ -1,5 +1,5 @@
 footer {
-  background: #dd4f24;
+  background: #ec79569a;
   padding: 20px 0px 20px 0px;
   text-align: center;
 }
@@ -9,7 +9,8 @@ footer {
 } */
 
 header {
-  background: #444;
+  background: black;
+  /* background: #444; */
   color: white;
   display: grid;
 }
@@ -19,22 +20,17 @@ body {
 
 }
 
-body section div {
-  /* border: 5px solid #00bbf0; */
-  /* position: absolute; 
-  top: 25%;
-  left: 40%;
-  height: 0;
-  width: 11%;*/
+body section div { 
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* text-align: center; */
+ 
 }
 
 form{
   color: white;
   display: block;
   text-align: center;
-  margin: 20px 0px 20px 0px;
+  margin: 200px 0px 200px 0px;
 }
 
 input{
@@ -46,11 +42,6 @@ input{
   margin-top: 3px;
   height: 40px;
   width: 180px;
-  /*text-align: center;
- 
-  
-  border-width: 0;
-  margin: 8%; */
 }
 
 #remembercheck{
@@ -65,12 +56,40 @@ input{
   border-radius: 10px;
   height: 40px;
   width: 80px;
-  color: white;
-  /*  
-  display: block;
+  color: white;  
+}
 
- 
-  border-width: 0px;
-  margin: 1% 0% 0% 45% ; */
-  
+header nav ul {
+  list-style: none;
+  display: flex;
+  padding: 8px 0px 8px 0px;
+  margin: 0px;
+}
+
+header nav ul li {
+  margin-left: 30px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 2px 8px 2px;
+}
+
+header nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+header .encabezado .logo,
+header .encabezado .grupo {
+    display: flex;
+}
+
+header .encabezado .logo {
+  float: left;
+}
+
+header .encabezado .grupo {
+  float: right;
 }
