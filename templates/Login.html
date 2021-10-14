@@ -1,61 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "Layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.min.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
-    <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
-</head>
-
-<body>
-    <header>
-        <div class="encabezado">
-            <div class="logo">
-                <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">               
-            </div>
-            <div class="grupo">
-                <h2>Blog Grupo 17 E3</h2>               
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">SALE</a></li>
-                <li><a href="#">CLOTHES</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">TECH</a></li>
-                <li><a href="#">TOYS</a></li>
-                <li><a href="#">PREMUM</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section>
-        <div class="login">
-            <form>
-                <label>USERNAME </label>
-                <input type="email" name="email" placeholder="Type something...">
-                <label>PASSWORD </label>
-                <input type="password" name="pass" placeholder="Type something...">                
-                <input id="remembercheck" type="checkbox" name="Remember password" value="Bike">
-                <label>Remember my password</label>
-                <input type="submit" value="Log in" id="submitbutton">
-            </form>
-        </div>
-    </section>
-
-
-
-    <footer>
-        <p>
-            <h3>Pagina web realizada por el grupo 17</h3>            
-            <span>Equipo 3</span>
-        </p>
-    </footer>
-
-</body>
-
-</html>
+{% block body %}
+<section>
+    <div class="login">
+        <form>
+            <label>USERNAME </label>
+            <input type="email" name="email" placeholder="Type something...">
+            <label>PASSWORD </label>
+            <input type="password" name="pass" placeholder="Type something...">                
+            <input id="remembercheck" type="checkbox" name="Remember password" value="Bike">
+            <label>Remember my password</label>
+            <input type="submit" value="Log in" id="submitbutton">
+        </form>
+    </div>
+</section>
+{% endblock %}
