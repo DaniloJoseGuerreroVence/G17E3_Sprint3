@@ -1,5 +1,5 @@
 footer {
-  background: #ec79569a;
+  /* background: #ec79569a; */
   padding: 20px 0px 20px 0px;
   text-align: center;
 }
@@ -9,15 +9,15 @@ footer {
 } */
 
 header {
-  background: black;
+  /* background: black; */
   /* background: #444; */
-  color: white;
+  /* color: white; */
   display: grid;
 }
 
 body {
   background-color: black;
-
+  color: white;
 }
 
 body section div { 
@@ -27,7 +27,7 @@ body section div {
 }
 
 form{
-  color: white;
+  /* color: white; */
   display: block;
   text-align: center;
   margin: 200px 0px 200px 0px;
@@ -56,7 +56,7 @@ input{
   border-radius: 10px;
   height: 40px;
   width: 80px;
-  color: white;  
+  /* color: white;   */
 }
 
 header nav ul {
@@ -92,4 +92,5 @@ header .encabezado .logo {
 
 header .encabezado .grupo {
   float: right;
+  padding-right: 10px;
 }
