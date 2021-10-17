@@ -4,14 +4,12 @@ body{
   top: 25%;
   left: 40%;
   height: 0;
-  width: 11%;
+  width: 11.04%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-}
-
-form{
   color: white;
 }
+
 
 input{
   display: block;
@@ -22,13 +20,13 @@ input{
   margin: 8%;
 }
 
-#remembercheck{
+#checkbox{
   display: inline;
   height: auto;
   width: auto;
 }
 
-#submitbutton{
+#button{
   color: white;
   background-color: #00bbf0;
   display: block;
@@ -36,5 +34,11 @@ input{
   width: 80px;
   border-radius: 10px;
   border-width: 0;
-  margin: auto;
+  position: relative;
+  left: 50px;
+}
+
+a{
+  color: #00bbf0;;
+  text-decoration: none;
 }

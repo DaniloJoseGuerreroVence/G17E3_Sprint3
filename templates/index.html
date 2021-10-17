@@ -10,14 +10,13 @@
 </head>
 <body>
     <img src="../static/img/LuxotticaLogo.png" alt="Luxottica Logo"> 
-    <form action="/enter" method="post">
-        {% for field in formlogin %}
+    <form action="/loging" method="post">
+        {% for field in form %}
         <div>
             {{field.label}}
             {{field}}
         </div>
         {%endfor%}
     </form>
-    <p>Not a member? <a href="/Signing">Create Account</a></p>
 </body>
 </html>
