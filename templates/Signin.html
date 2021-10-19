@@ -10,13 +10,16 @@
 </head>
 <body>
     <img src="../static/img/LuxotticaLogo.png" alt="Luxottica Logo"> 
-    <form action="/Loging" method="post">
-        {% for field in formsignin %}
-        <div>
-            {{field.label}}
-            {{field}}
-        </div>
-        {%endfor%}
+    <form action="/enter" method="post">
+        {{ formsignin.name }}
+        {{ formsignin.lastname }}
+        {{ formsignin.email }}
+        {{ formsignin.password }}
+        {{ formsignin.confirmpassword }}
+        {{ formsignin.agreement }} {{ formsignin.agreement.label }}
+        {{ formsignin.checkbox }} {{ formsignin.checkbox.label }}
+        {{ formsignin.button }}
     </form>
+    <p>Already have an account? <a href='/Loging'>Log in</a></p>
 </body>
 </html>

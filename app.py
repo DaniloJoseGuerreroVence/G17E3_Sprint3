@@ -6,7 +6,8 @@ app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
-    return render_template('Home.html')
+    formsearch = forms.FormSearch()
+    return render_template('Home.html', formsearch = formsearch)
 
 @app.route('/Loging')
 def Login():

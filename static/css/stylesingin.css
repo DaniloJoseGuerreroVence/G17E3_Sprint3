@@ -35,3 +35,16 @@ input{
   margin: auto;
   margin-top: 3%;
 }
+
+a{
+  color: #00bbf0;;
+  text-decoration: none;
+}
+
+label[for="csrf_token"]{
+  display: none;
+}
+
+label[for="button"]{
+  display: none;
+}

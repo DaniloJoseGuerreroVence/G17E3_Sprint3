@@ -18,9 +18,10 @@
             <div class="vertical"></div>
             <a href="" class="contact"><i class="fas fa-truck-moving"></i> follow your order </a> 
             <a href="" class="contact"><i class="fas fa-phone-alt"></i> Contact us </a>
-            <form>
-                <label><input type="search" class="bar" name="search" placeholder="Search product, mark and category..."> </label>
+            <form action="/Search" method="post">
                 <button type="submit" class="bar"><i class="fas fa-search" id="buttonsearch"></i></button>
+                {{ formsearch.searchbar }}
+                {{ formsearch.button }}
             </form>
         </section>
         <nav>

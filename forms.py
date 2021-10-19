@@ -3,6 +3,7 @@ from flask_wtf.recaptcha import widgets
 from wtforms import PasswordField, SubmitField, BooleanField, TextField
 from wtforms.fields.html5 import EmailField
 from wtforms.validators import DataRequired, Email
+from markupsafe import Markup
 
 class Formlogin(FlaskForm):
     username = EmailField('USERNAME', [DataRequired(message='User required'), Email()])
@@ -19,3 +20,8 @@ class FormSignin(FlaskForm):
     agreement = BooleanField('Agree with terms and conditions')
     checkbox = BooleanField('Remember my password')
     button = SubmitField('Sing in')
+
+class FormSearch(FlaskForm):
+    searchbar = TextField('Searchbar', render_kw={"placeholder": "Search product, mark and category..."})
+    Searchicon = Markup('<i class= fas fa-search></i>')
+    button = SubmitField(Searchicon)
