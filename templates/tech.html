@@ -1,0 +1,35 @@
+{% extends "Layout.html" %}
+
+{% block body %}
+    <section>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <div class="columna">
+            <img src="ipad2.png" alt="" class="imagen" >
+            <hr>
+            <h2 class="precio">200</h2>
+            <p>Descripcion </p>
+            <a href="#" class="btn-precio" >Add to car</a>
+        </div>
+        <div class="columna">
+            <img src="ipad2.png" alt="" class="imagen" >
+            <hr>
+            <h2 class="precio">200</h2>
+            <p>Descripcion </p>
+            <a href="#" class="btn-precio" >Add to Car</a>
+        </div>
+        <div class="columna">
+            <img src="ipad2.png" alt="" srcset="" class="imagen">
+            <hr>
+            <h2 class="precio">200</h2>
+            <p>Descripcion </p>
+            <a href="#" class="btn-precio" >Add to car</a>
+        </div>
+    </section>
+
+{% endblock %}
