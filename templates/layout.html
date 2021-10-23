@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
-    
+
     {% block head_link_rel %}
     {% endblock %}
 </head>
@@ -35,18 +35,12 @@
                         <li><a href="#">CLOTHES</a></li>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">TECH</a></li>
-                        <li><a href="#">TOYS</a></li>                      
+                        <li><a href="#">TOYS</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="buscador">
                 <form action="/buscar">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="search-container" class="topnav" class="topnav a">
-                <form action="/action_page.php">
                     <input type="text" placeholder="Search.." name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
