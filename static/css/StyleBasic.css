@@ -26,14 +26,15 @@ body section div {
  
 }
 
-form{
+body section .login form
+{
   /* color: white; */
   display: block;
   text-align: center;
   margin: 200px 0px 200px 0px;
 }
 
-input{
+body section .login form input{
   display: block;
   border-radius: 5px;
   width: 200px;
@@ -78,6 +79,26 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background: rgba(75, 74, 74, 0.692);
+}
+
+header .navegaccion .buscador button:hover {
+  background: #ccc; 
+  border-color:#ccc;
+}
+
+
+header .navegaccion .menu,
+header .navegaccion .buscador{
+  display: flex;
+}
+
+header .navegaccion .menu{
+  float: left;
+}
+
+header .navegaccion .buscador{
+  float: right;
+  padding-right: 10px;
 }
 
 
