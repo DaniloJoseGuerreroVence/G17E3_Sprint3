@@ -81,11 +81,11 @@ header nav ul li a:hover {
     background: rgba(75, 74, 74, 0.692);
 }
 
+
 header .navegaccion .buscador button:hover {
   background: #ccc; 
   border-color:#ccc;
 }
-
 
 header .navegaccion .menu,
 header .navegaccion .buscador{
@@ -114,4 +114,10 @@ header .encabezado .logo {
 header .encabezado .grupo {
   float: right;
   padding-right: 10px;
+}
+
+header .encabezado .grupo a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 2px 8px 2px;
 }
