@@ -1,4 +1,5 @@
-from flask import Flask, render_template,url_for
+
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -9,7 +10,6 @@ def index():
 @app.route('/tech')
 def tech():
     return render_template('tech.html')
-
 
 
 if __name__ == '__main__':

@@ -1,35 +1,67 @@
+
 {% extends "Layout.html" %}
+
 
 {% block body %}
     <section>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        
-        <div class="columna">
-            <img src="ipad2.png" alt="" class="imagen" >
-            <hr>
-            <h2 class="precio">200</h2>
-            <p>Descripcion </p>
-            <a href="#" class="btn-precio" >Add to car</a>
-        </div>
-        <div class="columna">
-            <img src="ipad2.png" alt="" class="imagen" >
-            <hr>
-            <h2 class="precio">200</h2>
-            <p>Descripcion </p>
-            <a href="#" class="btn-precio" >Add to Car</a>
-        </div>
-        <div class="columna">
-            <img src="ipad2.png" alt="" srcset="" class="imagen">
-            <hr>
-            <h2 class="precio">200</h2>
-            <p>Descripcion </p>
-            <a href="#" class="btn-precio" >Add to car</a>
-        </div>
-    </section>
+        <div class="container">
 
-{% endblock %}
+            <div class="flex" class="text-center">
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
+                    <hr>
+                    <h2 class="precio"> $ 200</h2>
+                    <p class="descripcion">Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to car</a>
+                </div>
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
+                    <hr>
+                    <h2 class="precio">200</h2>
+                    <p class=>Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to Car</a>
+                </div>
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" srcset="" class="imagen">
+                    <hr>
+                    <h2 class="precio">200</h2>
+                    <p>Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to car</a>
+                </div>
+            </div>
+            <div class="flex" class="text-center">
+                
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
+                    <hr>
+                    <h2 class="precio">200</h2>
+                    <p class="descripcion">Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to car</a>
+                </div>
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
+                    <hr>
+                    <h2 class="precio">200</h2>
+                    <p>Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to Car</a>
+                </div>
+                <div class="columna">
+                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" srcset="" class="imagen">
+                    <hr>
+                    <h2 class="precio">200</h2>
+                    <p>Descripcion </p>
+                    <a href="#" class="btn-precio" >Add to car</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static', filename='img/ipad2.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        {% endblock %}

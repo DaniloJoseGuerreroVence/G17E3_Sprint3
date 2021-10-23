@@ -8,8 +8,11 @@
     <title>Log in</title>
     <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/stylecarlosc.css')}}">
     <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
-    <link rel="icon" href="{{url_for('static', filename='img/ipad2')}}" type="image/icon type">
+    
+   
+
 </head>
 
 <body>
@@ -21,7 +24,14 @@
             <div class="grupo">
                 <h2>Blog Grupo 17 E3</h2>               
             </div>
+            <div class="search-container" class="topnav" class="topnav a">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
+
         <nav>
             <ul>
                 <li><a href="#">SALE</a></li>

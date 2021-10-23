@@ -83,6 +83,7 @@ header nav ul li a:hover {
 header .encabezado .logo,
 header .encabezado .grupo {
     display: flex;
+    margin: auto;
 }
 
 header .encabezado .logo {
