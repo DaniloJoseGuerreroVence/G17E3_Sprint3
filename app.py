@@ -11,6 +11,9 @@ def AddProduct():
     return render_template('add_product.html')
 
 
+@app.route('/buscar')
+def buscar():
+    return "<H1>BUSCANDO...</H1>"
 
 
 if __name__ == '__main__':
