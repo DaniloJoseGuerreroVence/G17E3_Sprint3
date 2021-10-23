@@ -1,15 +1,20 @@
-from flask import Flask, render_template,url_for
+
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
 @app.route('/')
+@app.route('/Login')
 def index():
     return render_template('Login.html')
 
+@app.route('/tech')
+def tech():
+    return render_template('tech.html')
+    
 @app.route('/AddProduct')
 def AddProduct():
     return render_template('add_product.html')
-
 
 @app.route('/buscar')
 def buscar():

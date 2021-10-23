@@ -105,6 +105,7 @@ header .navegaccion .buscador{
 header .encabezado .logo,
 header .encabezado .grupo {
     display: flex;
+    margin: auto;
 }
 
 header .encabezado .logo {
