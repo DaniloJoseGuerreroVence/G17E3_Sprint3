@@ -83,8 +83,12 @@ header nav ul li a:hover {
 
 
 header .navegaccion .buscador button:hover {
-  background: #ccc; 
-  border-color:#ccc;
+  display: inline-block;
+  /* font: normal normal normal 14px/1 FontAwesome; */
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+ 
 }
 
 header .navegaccion .menu,
