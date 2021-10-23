@@ -8,21 +8,42 @@
     <title>Log in</title>
     <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/stylecarlosc.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
     
-   
-
+    {% block head_link_rel %}
+    {% endblock %}
 </head>
+
 
 <body>
     <header>
         <div class="encabezado">
             <div class="logo">
-                <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">               
+                <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">
             </div>
             <div class="grupo">
-                <h2>Blog Grupo 17 E3</h2>               
+                <h2><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a> Blog Grupo 17 E3</h2>
+            </div>
+        </div>
+
+        <div class="navegaccion">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">CLOTHES</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">TECH</a></li>
+                        <li><a href="#">TOYS</a></li>                      
+                    </ul>
+                </nav>
+            </div>
+            <div class="buscador">
+                <form action="/buscar">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </div>
             <div class="search-container" class="topnav" class="topnav a">
                 <form action="/action_page.php">
@@ -31,29 +52,18 @@
                 </form>
             </div>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#">SALE</a></li>
-                <li><a href="#">CLOTHES</a></li>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">TECH</a></li>
-                <li><a href="#">TOYS</a></li>
-                <li><a href="#">PREMUM</a></li>
-            </ul>
-        </nav>
     </header>
 
 
 
-    {% block body %}    
-    {% endblock %}    
+    {% block body %}
+    {% endblock %}
 
-    
+
     <footer>
         <p>
-            <h3>Pagina web realizada por el grupo 17</h3>            
-            <span>Equipo 3</span>
+        <h3>Pagina web realizada por el grupo 17</h3>
+        <span>Equipo 3</span>
         </p>
     </footer>
 

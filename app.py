@@ -10,6 +10,14 @@ def index():
 @app.route('/tech')
 def tech():
     return render_template('tech.html')
+    
+@app.route('/AddProduct')
+def AddProduct():
+    return render_template('add_product.html')
+
+@app.route('/buscar')
+def buscar():
+    return "<H1>BUSCANDO...</H1>"
 
 
 if __name__ == '__main__':
