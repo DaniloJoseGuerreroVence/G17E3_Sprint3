@@ -9,7 +9,12 @@
     <h3>white silk dress</h3>
     <h1>$20,95</h1>
     <form action="/enter" method="post">
-    {{ formbuying.radio }}
+        <ul class="rate-area">
+            {% for star in formbuying.radio %}
+                {{ star }}
+                {{ star.label }}
+            {% endfor %}
+        </ul>
     {{ formbuying.comment }}
     {{ formbuying.button }}
     </form>
