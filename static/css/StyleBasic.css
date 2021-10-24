@@ -26,14 +26,15 @@ body section div {
  
 }
 
-form{
+body section .login form
+{
   /* color: white; */
   display: block;
   text-align: center;
   margin: 200px 0px 200px 0px;
 }
 
-input{
+body section .login form input{
   display: block;
   border-radius: 5px;
   width: 200px;
@@ -81,9 +82,34 @@ header nav ul li a:hover {
 }
 
 
+header .navegaccion .buscador button:hover {
+  display: inline-block;
+  /* font: normal normal normal 14px/1 FontAwesome; */
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; 
+ 
+}
+
+header .navegaccion .menu,
+header .navegaccion .buscador{
+  display: flex;
+}
+
+header .navegaccion .menu{
+  float: left;
+}
+
+header .navegaccion .buscador{
+  float: right;
+  padding-right: 10px;
+}
+
+
 header .encabezado .logo,
 header .encabezado .grupo {
     display: flex;
+    margin: auto;
 }
 
 header .encabezado .logo {
@@ -93,4 +119,10 @@ header .encabezado .logo {
 header .encabezado .grupo {
   float: right;
   padding-right: 10px;
+}
+
+header .encabezado .grupo a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 2px 8px 2px;
 }

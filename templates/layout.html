@@ -6,41 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/stylehome.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
-    <script src="https://kit.fontawesome.com/01593eba31.js" crossorigin="anonymous"></script>
+
+    {% block head_link_rel %}
+    {% endblock %}
 </head>
+
 
 <body>
     <header>
-        <section class="up">
-            <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo" id="logo">
-            <div class="vertical"></div>
-            <a href="" class="contact"><i class="fas fa-truck-moving"></i> follow your order </a> 
-            <a href="" class="contact"><i class="fas fa-phone-alt"></i> Contact us </a>
-            <form action="/Search" method="post">
-                <button type="submit" class="bar"><i class="fas fa-search" id="buttonsearch"></i></button>
-                {{ formsearch.searchbar }}
-                {{ formsearch.button }}
-            </form>
-        </section>
-        <nav>
-            <a href="#">SALE</a>
-            <div class="vertical2"></div>
-            <a href="#">CLOTHES</a>
-            <div class="vertical2"></div>
-            <a href="#">HOME</a>
-            <div class="vertical2"></div>
-            <a href="#">TECH</a>
-            <div class="vertical2"></div>
-            <a href="#">TOYS</a>
-            <div class="vertical2"></div>
-            <a href='/Loging'>PREMIUM</a>
-        </nav>
+        <div class="encabezado">
+            <div class="logo">
+                <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">
+            </div>
+            <div class="grupo">
+                <h2><a href="/Login"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a> Blog Grupo 17 E3</h2>
+            </div>
+        </div>
+
+        <div class="navegaccion">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">CLOTHES</a></li>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="/tech">TECH</a></li>
+                        <li><a href="#">TOYS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="buscador">
+                <form action="/buscar">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
     </header>
 
-    {% block body %}    
-    {% endblock %}     
+
+
+    {% block body %}
+    {% endblock %}
+
+
+    <footer>
+        <p>
+        <h3>Pagina web realizada por el grupo 17</h3>
+        <span>Equipo 3</span>
+        </p>
+    </footer>
 
 </body>
 </html>

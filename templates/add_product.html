@@ -1,0 +1,33 @@
+{% extends "Layout.html" %}
+
+{% block body %}
+  <div>
+     
+    <form>
+      <img src="{{url_for('static', filename='img/camera.png')}}" alt="camera logo"/>
+       <input type="submit" value="Upload file" id="submitbutton">
+    </form>
+  
+    <div class="b">
+      <span>PRODUCT INFORMATION</span>
+
+
+      <form>
+        <label><input id="a" type="text" name="name" placeholder="Product name..." ></label>
+        <label><input id="a" type="password" name="pass" placeholder="Product description..."></label>
+
+
+        <span >Insert colors available: </span>
+        <span >Insert sizes available: </span>
+
+        <label><input id="a" type="text" name="name" placeholder="Color A..."></label>
+        <label><input id="a" type="password" name="pass" placeholder="Color B..."></label>
+        <label><input id="a" type="text" name="name" placeholder="Insert Size range..."></label>
+        <label><input id="a" type="text" name="name" placeholder="Insert Price..."></label>  
+  
+        <input type="submit" value="Add to wish list" id="submitbutton">
+        <input type="submit" value="Add to car" id="submitbutton">
+      </form>
+    </div>  
+  </div>
+{% endblock %}
