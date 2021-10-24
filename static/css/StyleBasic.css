@@ -51,15 +51,6 @@ body section .login form input{
   width: auto;
 }
 
-#submitbutton{
-  background-color: #00bbf0;
-  margin-top: 10px;
-  border-radius: 10px;
-  height: 40px;
-  width: 80px;
-  /* color: white;   */
-}
-
 header nav ul {
   list-style: none;
   display: flex;
@@ -125,4 +116,62 @@ header .encabezado .grupo a {
   color: white;
   text-decoration: none;
   padding: 8px 2px 8px 2px;
+}
+
+.bodyimage{
+  border-radius: 20px;
+}
+
+.half{
+  display: inline-block;
+  width: 50%;
+  margin: 1% 0% 0% 28%;
+}
+
+figure{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+}
+
+figcaption{
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+#productimage{
+  width: 20%;
+  display: inline;
+}
+
+
+#description{
+  background: gray;
+  width: 20%;
+  padding: 15px;
+  position: relative;
+  left: -500px;
+}
+
+#button{
+  background-color: #00bbf0;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  border-width: 0;
+  color: white;
+  position: relative;
+  left: 100px;
+  margin: 4%;
+}
+
+#comment{
+  height: 50px;
+  width: 340px;
+  border-radius: 5px;
+  border-width: 0;
 }

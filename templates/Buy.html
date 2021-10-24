@@ -1,0 +1,19 @@
+{% extends "Layout.html" %}
+{% block body %}
+
+<div class="half" id="productimage">
+    <figure id="product"><img src="../static/img/dress.jpg" width="250" class="bodyimage" alt="Clothes section link"><figcaption class="caption"></figcaption></figure>
+</div>
+<div class="half" id="description">
+    <h2>APALACHA FIORE DRESS</h2>
+    <h3>white silk dress</h3>
+    <h1>$20,95</h1>
+    <form action="/enter" method="post">
+    {{ formbuying.radio }}
+    {{ formbuying.comment }}
+    {{ formbuying.button }}
+    </form>
+</div>
+</body>
+
+{% endblock %}

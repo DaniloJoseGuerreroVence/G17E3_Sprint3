@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.recaptcha import widgets
-from wtforms import PasswordField, SubmitField, BooleanField, TextField
+from wtforms import PasswordField, SubmitField, BooleanField, TextField, RadioField
 from wtforms.fields.html5 import EmailField
 from wtforms.validators import DataRequired, Email
 from markupsafe import Markup
@@ -25,3 +25,8 @@ class FormSearch(FlaskForm):
     searchbar = TextField('Searchbar', render_kw={"placeholder": "Search product, mark and category..."})
     Searchicon = Markup('<i class= fas fa-search></i>')
     button = SubmitField(Searchicon)
+
+class FormBuy(FlaskForm):
+    button = SubmitField('Buy')
+    comment = TextField('Name',render_kw={"placeholder": "write a comment..."})
+    radio = RadioField('Star', choices=[1,2,3,4,5])

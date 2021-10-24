@@ -1,12 +1,12 @@
 
 from flask import Flask, render_template
-app = Flask(__name__)
+
+import forms, os
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 @app.route('/')
-@app.route('/Login')
 def index():
     formsearch = forms.FormSearch()
     return render_template('Home.html', formsearch = formsearch)
@@ -32,6 +32,11 @@ def AddProduct():
 @app.route('/buscar')
 def buscar():
     return "<H1>BUSCANDO...</H1>"
+
+@app.route('/Buying')
+def Buying():
+    formbuying = forms.FormBuy()
+    return render_template('Buy.html', formbuying = formbuying)
 
 
 if __name__ == '__main__':
