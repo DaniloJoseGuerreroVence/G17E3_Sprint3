@@ -1,2 +1,4 @@
-/entorno/
-/__pycache__
+env/
+__pycache__/
+LuxotticaTemplates/
+entorno/
