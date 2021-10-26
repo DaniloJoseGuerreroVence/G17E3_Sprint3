@@ -1,7 +1,8 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from wtforms.validators import Email
 
-import forms, os
+import forms, os, DB, werkzeug.security as ws
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
@@ -16,7 +17,7 @@ def Login():
     formlogin = forms.Formlogin()
     return render_template('Login.html', formlogin = formlogin)
 
-@app.route('/Signing')
+@app.route('/Signing', methods=['GET','POST'])
 def Signin():
     formsignin = forms.FormSignin()
     return render_template('Signin.html', formsignin = formsignin)
@@ -37,6 +38,19 @@ def buscar():
 def Buying():
     formbuying = forms.FormBuy()
     return render_template('Buy.html', formbuying = formbuying)
+
+@app.route('/newuser', methods=['GET','POST'])
+def CreateUser():
+    form = forms.FormSignin()
+    if request.method == 'GET':
+        return render_template('Signin.html', formsignin = form)
+    else:
+        name = request.form['name']
+        lastname = request.form['lastname']
+        email = request.form['email']
+        password = request.form['password']
+        DB.createUser(name, lastname, email, ws.generate_password_hash(password))
+        return 'User created'
 
 
 if __name__ == '__main__':
