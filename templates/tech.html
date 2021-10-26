@@ -1,69 +1,177 @@
 {% extends "Layout.html" %}
 
 {% block head_link_rel %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/sheetslider.min.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
 <link rel="stylesheet" href="{{url_for('static',filename='css/stylecarlosc.css')}}">
+<script src="{{url_for('static',filename='js/main.js')}}"></script>
+
 {% endblock %}
 
 {% block body %}
-    <section>
-        <div class="container">
+<div class="main box">
+    <!--Sheet Slider-->
+    <div class="sheetSlider sh-default sh-auto">
+        <input id="s1" type="radio" name="slide1" checked />
+        <input id="s2" type="radio" name="slide1" />
+        <input id="s3" type="radio" name="slide1" />
+        <input id="s4" type="radio" name="slide1" />
+        <input id="s5" type="radio" name="slide1" />
+        <div class="sh__content">
 
-            <div class="flex" class="text-center">
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
-                    <hr>
-                    <h2 class="precio"> $ 200</h2>
-                    <p class="descripcion">Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to car</a>
-                </div>
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
-                    <hr>
-                    <h2 class="precio">200</h2>
-                    <p class=>Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to Car</a>
-                </div>
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" srcset="" class="imagen">
-                    <hr>
-                    <h2 class="precio">200</h2>
-                    <p>Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to car</a>
+            <!-- Slider Item -->
+            <div class="sh__item">
+                <img src="{{url_for('static', filename='img/slide-img12.jpg')}}" alt="imgText" />
+                <!-- Item Info -->
+                <div class="sh__meta">
+                    <h4>Artwork surreal</h4>
+                    <span>Secondary text without link</span>
                 </div>
             </div>
-            <div class="flex" class="text-center">
-                
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
-                    <hr>
-                    <h2 class="precio">200</h2>
-                    <p class="descripcion">Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to car</a>
-                </div>
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" class="imagen" >
-                    <hr>
-                    <h2 class="precio">200</h2>
-                    <p>Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to Car</a>
-                </div>
-                <div class="columna">
-                    <img src="{{url_for('static', filename='img/ipad2.png')}}" alt="" srcset="" class="imagen">
-                    <hr>
-                    <h2 class="precio">200</h2>
-                    <p>Descripcion </p>
-                    <a href="#" class="btn-precio" >Add to car</a>
+
+            <!-- Slider Item -->
+            <div class="sh__item">
+                <img src="{{url_for('static', filename='img/slide-img02.jpg')}}" alt="imgText" />
+                <!-- Item Info -->
+                <div class="sh__meta">
+                    <h4>2 Weeks</h4>
+                    <span>Secondary text <a href="#urlPage">with link</a></span>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="{{url_for('static', filename='img/ipad2.png')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <!-- Slider Item -->
+            <div class="sh__item">
+                <img src="{{url_for('static', filename='img/slide-img03.jpg')}}" alt="imgText" />
+                <!-- Item Info -->
+                <div class="sh__meta">
+                    <h4>Cat under a carpet</h4>
+                    <span>Secondary text without link</span>
                 </div>
+            </div>
+
+            <!-- Slider Item -->
+            <div class="sh__item">
+                <img src="{{url_for('static', filename='img/slide-img04.jpg')}}" alt="imgText" />
+                <!-- Item Info -->
+                <div class="sh__meta">
+                    <h4>Sheet</h4>
+                    <span>Secondary text without link</span>
+                </div>
+            </div>
+
+            <!-- Slider Item -->
+            <div class="sh__item">
+                <img src="{{url_for('static', filename='img/slide-img07.jpg')}}" alt="imgText" />
+                <!-- Item Info -->
+                <div class="sh__meta">
+                    <h4>Cute girl and cat</h4>
+                    <span>Secondary text without link</span>
+                </div>
+            </div>
+
+        </div><!-- .sh__content -->
+
+        <!--botones -->
+        <div class="sh__btns">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
+            <label for="s4"></label>
+            <label for="s5"></label>
+        </div><!-- .sh__btns -->
+
+        <!--flechas-->
+        <div class="sh__arrows">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
+            <label for="s4"></label>
+            <label for="s5"></label>
+        </div><!-- .sh__arrows -->
+
+        <!--Control-->
+        <button class="sh-control"></button>
+    </div><!-- .sheetSlider -->
+</div>
+
+<section class="productos">
+    <div class="contenedor">
+        <div class="columna1">
+            <a title="Ipad 2020" href="#"><img src="{{url_for('static', filename='img/img-car.png')}}" alt="Ipad"
+                    class="imagen" /></a>
+            <hr>
+            <h2 class="precio"> $ 200</h2>
+            <p class="descripcion">Ipad pro 2021 </p>
+            <a href="#" class="btn-precio">Add to car</a>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </div>
+        <div class="columna2">
+            <a title="Board Aorus B450" href="#"><img src="{{url_for('static', filename='img/img-car-05.png')}}"
+                    alt="Board Aorus B450" class="imagen" /></a>
+            <hr>
+            <h2 class="precio">$ 200</h2>
+            <p class=>Board Aorus B450 Elite V2</p>
+            <a href="#" class="btn-precio">Add to Car</a>
+        </div>
+        <div class="columna3">
+            <a title="Tarjeta Asrock Rx6900xt" href="#"><img src="{{url_for('static', filename='img/img-car-02.png')}}"
+                    alt="Tarjeta Asrock Rx6900xt" class="imagen" /></a>
+            <hr>
+            <h2 class="precio">$ 200</h2>
+            <p>Tarjeta De Video Asrock
+                Rx6900xt Formula Oc 16g </p>
+            <a href="#" class="btn-precio">Add to car</a>
+        </div>
+        <div class="columna4">
+            <a title="RAM XPG Spectrix D50" href="#"><img src="{{url_for('static', filename='img/img-car-03.jpg')}}"
+                    alt="RAM XPG Spectrix D50" class="imagen" /></a>
+            <hr>
+            <h2 class="precio">$ 200</h2>
+            <p>Memoria Ram Adata Xpg Spectrix D50 8gb 3200 Mhz White png </p>
+            <a href="#" class="btn-precio">Add to car</a>
+        </div>
+    </div>
+
+    <section class="productos">
+        <div class="contenedor">
+            <div class="columna1">
+                <a title="Ipad 2020" href="#"><img src="{{url_for('static', filename='img/img-car.png')}}" alt="Ipad"
+                        class="imagen" /></a>
+                <hr>
+                <h2 class="precio"> $ 200</h2>
+                <p class="descripcion">Ipad pro 2021 </p>
+                <a href="#" class="btn-precio">Add to car</a>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </div>
+            <div class="columna2">
+                <a title="Board Aorus B450" href="#"><img src="{{url_for('static', filename='img/img-car-05.png')}}"
+                        alt="Board Aorus B450" class="imagen" /></a>
+                <hr>
+                <h2 class="precio">$ 200</h2>
+                <p class=>Board Aorus B450 Elite V2</p>
+                <a href="#" class="btn-precio">Add to Car</a>
+            </div>
+            <div class="columna3">
+                <a title="Tarjeta Asrock Rx6900xt" href="#"><img
+                        src="{{url_for('static', filename='img/img-car-02.png')}}" alt="Tarjeta Asrock Rx6900xt"
+                        class="imagen" /></a>
+                <hr>
+                <h2 class="precio">$ 200</h2>
+                <p>Tarjeta De Video Asrock
+                    Rx6900xt Formula Oc 16g </p>
+                <a href="#" class="btn-precio">Add to car</a>
+            </div>
+            <div class="columna4">
+                <a title="RAM XPG Spectrix D50" href="#"><img src="{{url_for('static', filename='img/img-car-03.jpg')}}"
+                        alt="RAM XPG Spectrix D50" class="imagen" /></a>
+                <hr>
+                <h2 class="precio">$ 200</h2>
+                <p>Memoria Ram Adata Xpg Spectrix D50 8gb 3200 Mhz White png </p>
+                <a href="#" class="btn-precio">Add to car</a>
             </div>
         </div>
-        </section>
-        
-        {% endblock %}
+
+    </div>
+</section>
+
+{% endblock %}

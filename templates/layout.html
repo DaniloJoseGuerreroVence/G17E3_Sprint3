@@ -10,43 +10,46 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{{url_for('static', filename='img/Icon.png')}}" type="image/icon type">
-
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
     {% block head_link_rel %}
     {% endblock %}
 </head>
 
 
 <body>
-    <header>
-        <div class="encabezado">
-            <div class="logo">
-                <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">
-            </div>
-            <div class="grupo">
-                <h2><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a> Blog Grupo 17 E3</h2>
-            </div>
-        </div>
+    <div class="padre">
 
-        <div class="navegaccion">
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="#">SALE</a></li>
-                        <li><a href="#">CLOTHES</a></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">TECH</a></li>
-                        <li><a href="#">TOYS</a></li>
-                    </ul>
-                </nav>
+        <header>
+            <div class="encabezado">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">
+                </div>
+                <div class="grupo">
+                    <h2><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a> Blog Grupo 17 E3</h2>
+                </div>
             </div>
-            <div class="buscador">
-                <form action="/buscar">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+            
+            <div class="navegaccion">
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">SALE</a></li>
+                            <li><a href="#">CLOTHES</a></li>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">TECH</a></li>
+                            <li><a href="#">TOYS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="buscador">
+                    <form action="/buscar">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
 
 
