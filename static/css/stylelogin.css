@@ -1,6 +1,6 @@
-body{
+.Login {
   background-color: black;
-  position: absolute;
+  /* position: absolute; */
   top: 25%;
   left: 40%;
   height: 0;
@@ -11,7 +11,7 @@ body{
 }
 
 
-input{
+form .Login input{
   display: block;
   height: 40px;
   width: 180px;
@@ -20,13 +20,13 @@ input{
   margin: 8%;
 }
 
-#checkbox{
+form .Login #checkbox{
   display: inline;
   height: auto;
   width: auto;
 }
 
-#button{
+form .Login #button{
   color: white;
   background-color: #00bbf0;
   display: block;
@@ -38,15 +38,15 @@ input{
   left: 50px;
 }
 
-a{
+form .Login a{
   color: #00bbf0;;
   text-decoration: none;
 }
 
-label[for="csrf_token"]{
+form .Login label[for="csrf_token"]{
   display: none;
 }
 
-label[for="button"]{
+form .Login label[for="button"]{
   display: none;
 }

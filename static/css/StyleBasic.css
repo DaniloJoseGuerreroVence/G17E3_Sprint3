@@ -34,7 +34,9 @@ body section .login form
   margin: 200px 0px 200px 0px;
 }
 
-body section .login form input{
+body section .login form input[type=email],
+body section .login form input[type=password] ,
+#button {
   display: block;
   border-radius: 5px;
   width: 200px;
@@ -43,6 +45,12 @@ body section .login form input{
   margin-top: 3px;
   height: 40px;
   width: 180px;
+}
+
+#checkbox{
+  height: 10px;
+  width: 10px;
+  /* display: flex; */
 }
 
 #remembercheck{
@@ -159,14 +167,15 @@ a{
 
 #button{
   background-color: #00bbf0;
+  margin-top: 10px;
   height: 40px;
-  width: 150px;
+  width: 150px;  
   border-radius: 5px;
   border-width: 0;
   color: white;
-  position: relative;
-  left: 100px;
-  margin: 4%;
+  /* position: relative; */
+  /* left: 100px; */
+  /* margin: 4%; */
 }
 
 #comment{
