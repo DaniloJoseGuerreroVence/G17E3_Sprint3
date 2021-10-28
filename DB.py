@@ -16,3 +16,15 @@ def createUser (name, lastname, email, password):
     cursor.execute(strsql)
     conexion.commit()
     conexion.close()
+
+def getLogs (table, condition):
+    conexion = databaseConexion()
+    cursor = conexion.cursor()
+    if condition == None:
+        strql = 'SELECT * FROM {}'.format(table)
+    else:
+        strql = 'SELECT *FROM {} WHERE {}'.format(table, condition)
+    cursor.execute(strql)
+    data = cursor.fetchall()
+    conexion.close()
+    return data

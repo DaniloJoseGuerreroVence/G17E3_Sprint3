@@ -14,8 +14,8 @@ def index():
 
 @app.route('/Loging')
 def Login():
-    formlogin = forms.Formlogin()
-    return render_template('Login.html', formlogin = formlogin)
+    form = forms.Formlogin()
+    return render_template('Login.html', formlogin = form)
 
 @app.route('/Signing', methods=['GET','POST'])
 def Signin():
@@ -51,6 +51,22 @@ def CreateUser():
         password = request.form['password']
         DB.createUser(name, lastname, email, ws.generate_password_hash(password))
         return 'User created'
+
+@app.route('/Loging', methods=['GET', 'POST'])
+def Loging():
+    form = forms.Formlogin()
+    if request.method == 'GET':
+        return render_template('Login.html', formlogin = form)
+    else:
+        user = request.form['username']
+        existing_user = DB.getLogs('Users', "Email='{}'".format(user))
+        bd_password = existing_user[0][4]
+        if existing_user is not None:
+            password = request.form['password']
+            check_password = ws.check_password_hash(bd_password, password)
+            if check_password:
+                return 'Logged User'
+        return render_template('Login.html', formlogin = form)
 
 
 if __name__ == '__main__':
