@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    {% block title %}
+    {% endblock %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/normalize.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/StyleBasic.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,11 @@
                 <img src="{{url_for('static', filename='img/Logo.png')}}" alt="Luxottica Logo">
             </div>
             <div class="grupo">
+                {% block username %}
+                {% endblock %}
                 <h2><a href="/Loging"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a> Blog Grupo 17 E3</h2>
+                {% block logout %}
+                {% endblock %}
             </div>
         </div>
 

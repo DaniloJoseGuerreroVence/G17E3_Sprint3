@@ -1,6 +1,25 @@
 {% extends "Layout.html" %}
 
+{% block title %}
+{% if user %}
+<title>{{ user[0][1] }} - Luxottica Group</title>
+{% endif %}
+{% endblock %}
+
+{% block username %}
+{% if user %}
+<h2>{{ user[0][1] }}</h2>
+{% endif %}
+{% endblock %}
+
+{% block logout %}
+{% if user %}
+<a id="logout" href="/Logout">Logout</a>
+{% endif %}
+{% endblock %}
+
 {% block body %}
+  
   <div>
      
     <form>

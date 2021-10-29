@@ -219,3 +219,10 @@ a{
 .rate-area > label:hover ~ input:checked ~ label {
 	color: gold;
 }
+
+a#logout{
+  position: relative;
+  right: 300px;
+  top: 40px;
+  
+}

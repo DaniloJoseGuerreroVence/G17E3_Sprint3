@@ -28,3 +28,4 @@ def getLogs (table, condition):
     data = cursor.fetchall()
     conexion.close()
     return data
+    
