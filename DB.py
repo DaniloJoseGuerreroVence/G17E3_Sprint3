@@ -29,3 +29,10 @@ def getLogs (table, condition):
     conexion.close()
     return data
     
+def addProduct (user_id, image, product, price, description):
+    conexion = databaseConexion()
+    cursor = conexion.cursor()
+    strsql = "INSERT INTO Products (User_ID, Image, Product_Name, Price, Product_Description) VALUES ('{}', '{}', '{}', '{}', '{}')".format(user_id, image, product, price, description)
+    cursor.execute(strsql)
+    conexion.commit()
+    conexion.close()

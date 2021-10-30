@@ -1,6 +1,6 @@
 
 import re
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, jsonify
 from werkzeug.utils import redirect 
 from wtforms.validators import Email
 
@@ -75,6 +75,7 @@ def Logout():
 @app.route('/addproduct')
 @app.route('/addproduct/<user>')
 def Profile(user=None):
+    form = forms.FormAddproduct()
     if user:
         user_data = DB.getLogs('Users', "Email='{}'".format(user))
         if user_data:
@@ -82,12 +83,28 @@ def Profile(user=None):
             add = False
             if user == session['user']:
                 add = True
-            return render_template('add_product.html', user=user_data, add=add)
+            return render_template('add_product.html', user=user_data, add=add, formaddproduct=form)
         else:
             user = session['user']
             return redirect('/addproduct/{}'.format(user))
     else:
-        return render_template('add_product.html')        
+        return render_template('add_product.html')     
+
+@app.route('/createproduct', methods=['POST'])
+def CreateProduct():
+    form = forms.FormAddproduct()
+    if 'user' in session:
+        user = session['user']
+        user_data = DB.getLogs('Users', "Email='{}'".format(user))
+        user_id = user_data[0][0]
+        image = request.data.decode().replace('\n', ' ').replace('\r', '')
+        product = request.form['product']
+        price = request.form['price']
+        product_description = request.form['product_description']
+        DB.addProduct(user_id, image, product, price, product_description)
+        return jsonify("imagen guardada exitosamente")
+    else:
+        return redirect ('/Loging')
         
 
 if __name__ == '__main__':

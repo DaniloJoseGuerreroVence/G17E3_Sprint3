@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from flask_wtf.recaptcha import widgets
-from wtforms import PasswordField, SubmitField, BooleanField, TextField, RadioField
-from wtforms.fields.html5 import EmailField
+from wtforms import PasswordField, SubmitField, BooleanField, TextField, RadioField, FileField
+from wtforms.fields.html5 import DecimalField, EmailField
 from wtforms.validators import DataRequired, Email
 from markupsafe import Markup
 
@@ -30,3 +30,10 @@ class FormBuy(FlaskForm):
     button = SubmitField('Buy')
     comment = TextField('Name',render_kw={"placeholder": "write a comment..."})
     radio = RadioField('Star', choices=[1,2,3,4,5])
+
+class FormAddproduct(FlaskForm):
+    image = FileField('Image')
+    product = TextField('Product name',render_kw={"placeholder": "Product name"})
+    price = DecimalField('Price',render_kw={"placeholder": "Price"})
+    product_description = TextField('Product description',render_kw={"placeholder": "Product description"})
+    add_product = SubmitField('Add Product')

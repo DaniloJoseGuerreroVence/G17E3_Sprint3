@@ -224,5 +224,37 @@ a#logout{
   position: relative;
   right: 300px;
   top: 40px;
-  
+  color: #00bbf0;  
+}
+
+#imageupload{
+  text-align: center;
+}
+
+.b{
+  text-align: center;
+}
+
+.b input{
+  margin: 1%;
+  width: 260px;
+  height: 30px;
+  border-radius: 5px;
+  border-width: 0;
+}
+
+#product_description{
+  height: 100px;
+}
+
+#add_product{
+  color: white;
+  background-color: #00bbf0;
+  display: block;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border-width: 0;
+  margin: auto;
+  margin-top: 1%;
 }
